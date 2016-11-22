@@ -20,5 +20,17 @@ Route::get('helloworld', function() {
 });
 
 Route::get('getHandyList', function() {
-    return 'getHandyListStub';
+    return view('getHandyList');
 });
+
+Route::get('filter/{hersteller}', function($hersteller) {
+    return "todo";
+})
+
+Route::get('Programmname', function() {
+    return 'Nachricht von Programmname. Ich komme aus der Datei ' . __FILE__;
+});
+
+Route::get('create', 'ItController@create');
+
+Route::get('toggle', 'SchaltController@toggle');
