@@ -3,12 +3,8 @@
         <title>App Name - @yield('title')</title>
     </head>
     <body>
-        @section('sidebar')
-            This is the master sidebar.
-        @show
-
-        <div class="container">
-            @yield('content')
-        </div>
+        @for ($i = 0; $i < 10; $i++)
+            The current value is {{ $i }} <br>
+        @endfor
     </body>
 </html>
