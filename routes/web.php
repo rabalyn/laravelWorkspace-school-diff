@@ -20,12 +20,12 @@ Route::get('helloworld', function() {
 });
 
 Route::get('getHandyList', function() {
-    return view('getHandyList');
+    return ('getHandyList');
 });
 
 Route::get('filter/{hersteller}', function($hersteller) {
     return "todo";
-})
+});
 
 Route::get('Programmname', function() {
     return 'Nachricht von Programmname. Ich komme aus der Datei ' . __FILE__;
@@ -34,3 +34,7 @@ Route::get('Programmname', function() {
 Route::get('create', 'ItController@create');
 
 Route::get('toggle', 'SchaltController@toggle');
+
+Route::get('handyliste/serialize/{type}', 'Serialisierungscontroller@serialize');
+
+Route::get('artikel/propertyTest', 'ArtikelController@test');
