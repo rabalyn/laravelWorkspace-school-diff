@@ -7,7 +7,7 @@ class Handy {
     private $modell;
     private $preis;
 
-    public function toString() {
+    public function __toString() {
         return $this->modell . ' von ' . $this->hersteller . ' zum Preis von ' . $this->preis;
     }
 
